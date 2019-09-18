@@ -1,0 +1,20 @@
+info:
+  artifact: spring-actuator-example
+  name: Spring Boot Actuator Example
+  description: Spring Boot Actuator Example
+  version: 1.0.0
+
+#Exposes Spring actuator endpoints
+management:
+  server:
+    port: 7979
+    servlet:
+      context-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "*"
